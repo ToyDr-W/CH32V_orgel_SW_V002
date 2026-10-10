@@ -31,8 +31,8 @@ song_idx_bgn:
 //son_mac (song__FUYU3)
 //#define song__FUYU3_DEF
 
-son_mac (song__FUYU4)
-#define song__FUYU4_DEF
+//son_mac (song__FUYU4)
+//#define song__FUYU4_DEF
 
 //son_mac (song__HARU2)
 //#define song__HARU2_DEF
@@ -40,14 +40,14 @@ son_mac (song__FUYU4)
 //son_mac (song__HARU3)
 //#define song__HARU3_DEF
 
-son_mac (song__HARU4)
-#define song__HARU4_DEF
+//son_mac (song__HARU4)
+//#define song__HARU4_DEF
  
-son_mac (song__HAWAIIAN) 
-#define song__HAWAIIAN_DEF
+//son_mac (song__HAWAIIAN)
+//#define song__HAWAIIAN_DEF
  
-son_mac (song__INDONESIAN) 
-#define song__INDONESIAN_DEF
+//son_mac (song__INDONESIAN)
+//#define song__INDONESIAN_DEF
  
 //son_mac (song__LATIN)
 //#define song__LATIN_DEF
@@ -58,8 +58,8 @@ son_mac (song__INDONESIAN)
 //son_mac (song__NATSU2)
 //#define song__NATSU2_DEF
  
-son_mac (song__NATSU3)
-#define song__NATSU3_DEF
+//son_mac (song__NATSU3)
+//#define song__NATSU3_DEF
  
 //son_mac (song_AIAI) 
 //#define song_AIAI_DEF
@@ -199,6 +199,9 @@ son_mac (song__NATSU3)
 //son_mac (song_FUYUGESHIKI) 
 //#define song_FUYUGESHIKI_DEF
  
+son_mac (song_FUYUNOSEIZA3)
+#define song_FUYUNOSEIZA3_DEF
+
 //son_mac (song_FUYUNOUTA) 
 //#define song_FUYUNOUTA_DEF
  
@@ -358,6 +361,9 @@ son_mac (song__NATSU3)
 //son_mac (song_MICKY) 
 //#define song_MICKY_DEF
  
+son_mac (song_MIRAIHE3)
+#define song_MIRAIHE3_DEF
+
 //son_mac (song_MOMIJI) 
 //#define song_MOMIJI_DEF
  

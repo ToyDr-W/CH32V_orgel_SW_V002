@@ -190,6 +190,9 @@
 //son_mac (song_FUYUGESHIKI) 
 //#define song_FUYUGESHIKI_DEF
  
+//son_mac (song_FUYUNOSEIZA3) 
+//#define song_FUYUNOSEIZA3_DEF
+ 
 //son_mac (song_FUYUNOUTA) 
 //#define song_FUYUNOUTA_DEF
  

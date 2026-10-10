@@ -61,118 +61,146 @@ END GROUP
  *fill*         0x00000000000000a6        0x2 
                 0x00000000000000a8                _einit = .
 
-.text           0x00000000000000a8     0x354c
+.text           0x00000000000000a8     0x3938
                 0x00000000000000a8                . = ALIGN (0x4)
  *(.text)
- .text          0x00000000000000a8     0x29cc ./User/song_idx.o
+ .text          0x00000000000000a8     0x1472 ./User/song_idx.o
                 0x00000000000000a8                SONG_IDX
-                0x00000000000000c0                song_idx_dmy
-                0x00000000000000c2                enve_EXP
-                0x0000000000000102                wave_SIN14
-                0x0000000000000500                wave_SHEPARD
-                0x0000000000000f32                enve_RSN
-                0x00000000000011c4                wave_RING4
- .text          0x0000000000002a74       0x14 c:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc12/bin/../lib/gcc/riscv-none-elf/12.2.0/rv32ec_zmmul_xw/ilp32e\libgcc.a(save-restore.o)
-                0x0000000000002a74                __riscv_save_1
-                0x0000000000002a74                __riscv_save_2
-                0x0000000000002a74                __riscv_save_0
-                0x0000000000002a7e                __riscv_restore_0
-                0x0000000000002a7e                __riscv_restore_1
-                0x0000000000002a7e                __riscv_restore_2
- .text          0x0000000000002a88       0x10 c:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc12/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/rv32ec_zmmul_xw/ilp32e\libg_nano.a(lib_a-memset.o)
-                0x0000000000002a88                memset
+                0x00000000000000b4                song_idx_dmy
+                0x00000000000000b6                enve_RSN
+                0x00000000000000f6                enve_ELEGANTE
+                0x00000000000001f6                wave_SIN14
+                0x00000000000002f6                wave_SHEPARD
+                0x0000000000000964                wave_RING4
+ .text          0x000000000000151a       0x14 c:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc12/bin/../lib/gcc/riscv-none-elf/12.2.0/rv32ec_zmmul_xw/ilp32e\libgcc.a(save-restore.o)
+                0x000000000000151a                __riscv_save_1
+                0x000000000000151a                __riscv_save_2
+                0x000000000000151a                __riscv_save_0
+                0x0000000000001524                __riscv_restore_0
+                0x0000000000001524                __riscv_restore_1
+                0x0000000000001524                __riscv_restore_2
+ .text          0x000000000000152e       0x10 c:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc12/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/rv32ec_zmmul_xw/ilp32e\libg_nano.a(lib_a-memset.o)
+                0x000000000000152e                memset
  *(.text.*)
+ .text.wait_us  0x000000000000153e       0x3e ./User/main.o
+ .text.wait_ms  0x000000000000157c       0x22 ./User/main.o
+ .text.spi_send_
+                0x000000000000159e       0x38 ./User/main.o
+ .text.spi_set  0x00000000000015d6       0x4a ./User/main.o
+ .text.spi_reset
+                0x0000000000001620       0x1e ./User/main.o
+ .text.W25_PWR_UP
+                0x000000000000163e       0x20 ./User/main.o
  .text.song_init
-                0x0000000000002a98       0x6e ./User/main.o
- .text.wait_pwm
-                0x0000000000002b06       0x14 ./User/main.o
- .text.wait_ms  0x0000000000002b1a       0x3e ./User/main.o
+                0x000000000000165e       0x6e ./User/main.o
+ .text.ima_decode
+                0x00000000000016cc       0xa0 ./User/main.o
+ .text.sw_read  0x000000000000176c       0xb0 ./User/main.o
+ .text.cds_read
+                0x000000000000181c       0xfe ./User/main.o
  .text.SystemInit
-                0x0000000000002b58       0x42 ./User/main.o
-                0x0000000000002b58                SystemInit
- .text.startup.main
-                0x0000000000002b9a      0x8ba ./User/main.o
-                0x0000000000002b9a                main
+                0x000000000000191a       0x42 ./User/main.o
+                0x000000000000191a                SystemInit
  .text.TIM1_UP_IRQHandler
-                0x0000000000003454       0x5a ./User/main.o
-                0x0000000000003454                TIM1_UP_IRQHandler
+                0x000000000000195c       0x7c ./User/main.o
+                0x000000000000195c                TIM1_UP_IRQHandler
+ .text.cvd_read
+                0x00000000000019d8      0x134 ./User/main.o
+                0x00000000000019d8                cvd_read
+ .text.startup.main
+                0x0000000000001b0c      0xcfe ./User/main.o
+                0x0000000000001b0c                main
  .text.vector_handler
-                0x00000000000034ae        0x2 ./Startup/startup_ch32v00X.o
-                0x00000000000034ae                OPCM_IRQHandler
-                0x00000000000034ae                TIM1_CC_IRQHandler
-                0x00000000000034ae                HardFault_Handler
-                0x00000000000034ae                SysTick_Handler
-                0x00000000000034ae                PVD_IRQHandler
-                0x00000000000034ae                NMI_Handler
-                0x00000000000034ae                SPI1_IRQHandler
-                0x00000000000034ae                AWU_IRQHandler
-                0x00000000000034ae                EXTI7_0_IRQHandler
-                0x00000000000034ae                DMA1_Channel4_IRQHandler
-                0x00000000000034ae                ADC1_IRQHandler
-                0x00000000000034ae                DMA1_Channel7_IRQHandler
-                0x00000000000034ae                I2C1_EV_IRQHandler
-                0x00000000000034ae                DMA1_Channel6_IRQHandler
-                0x00000000000034ae                RCC_IRQHandler
-                0x00000000000034ae                TIM1_TRG_COM_IRQHandler
-                0x00000000000034ae                DMA1_Channel1_IRQHandler
-                0x00000000000034ae                DMA1_Channel5_IRQHandler
-                0x00000000000034ae                DMA1_Channel3_IRQHandler
-                0x00000000000034ae                WWDG_IRQHandler
-                0x00000000000034ae                TIM2_IRQHandler
-                0x00000000000034ae                SW_Handler
-                0x00000000000034ae                TIM1_BRK_IRQHandler
-                0x00000000000034ae                USART2_IRQHandler
-                0x00000000000034ae                DMA1_Channel2_IRQHandler
-                0x00000000000034ae                FLASH_IRQHandler
-                0x00000000000034ae                USART1_IRQHandler
-                0x00000000000034ae                I2C1_ER_IRQHandler
+                0x000000000000280a        0x2 ./Startup/startup_ch32v00X.o
+                0x000000000000280a                OPCM_IRQHandler
+                0x000000000000280a                TIM1_CC_IRQHandler
+                0x000000000000280a                HardFault_Handler
+                0x000000000000280a                SysTick_Handler
+                0x000000000000280a                PVD_IRQHandler
+                0x000000000000280a                NMI_Handler
+                0x000000000000280a                SPI1_IRQHandler
+                0x000000000000280a                AWU_IRQHandler
+                0x000000000000280a                EXTI7_0_IRQHandler
+                0x000000000000280a                DMA1_Channel4_IRQHandler
+                0x000000000000280a                ADC1_IRQHandler
+                0x000000000000280a                DMA1_Channel7_IRQHandler
+                0x000000000000280a                I2C1_EV_IRQHandler
+                0x000000000000280a                DMA1_Channel6_IRQHandler
+                0x000000000000280a                RCC_IRQHandler
+                0x000000000000280a                TIM1_TRG_COM_IRQHandler
+                0x000000000000280a                DMA1_Channel1_IRQHandler
+                0x000000000000280a                DMA1_Channel5_IRQHandler
+                0x000000000000280a                DMA1_Channel3_IRQHandler
+                0x000000000000280a                WWDG_IRQHandler
+                0x000000000000280a                TIM2_IRQHandler
+                0x000000000000280a                SW_Handler
+                0x000000000000280a                TIM1_BRK_IRQHandler
+                0x000000000000280a                USART2_IRQHandler
+                0x000000000000280a                DMA1_Channel2_IRQHandler
+                0x000000000000280a                FLASH_IRQHandler
+                0x000000000000280a                USART1_IRQHandler
+                0x000000000000280a                I2C1_ER_IRQHandler
  .text.handle_reset
-                0x00000000000034b0       0x8a ./Startup/startup_ch32v00X.o
-                0x00000000000034b0                handle_reset
+                0x000000000000280c       0x8a ./Startup/startup_ch32v00X.o
+                0x000000000000280c                handle_reset
  *(.rodata)
  *(.rodata*)
- *fill*         0x000000000000353a        0x2 
+ *fill*         0x0000000000002896        0x2 
  .rodata.sw_cnt
-                0x000000000000353c        0x5 ./User/main.o
- *fill*         0x0000000000003541        0x3 
+                0x0000000000002898        0x4 ./User/main.o
  .rodata.sw_cnf
-                0x0000000000003544       0x28 ./User/main.o
+                0x000000000000289c       0x20 ./User/main.o
+ .rodata.INDEX_TABLE
+                0x00000000000028bc       0x10 ./User/main.o
+ .rodata.STEP_TABLE
+                0x00000000000028cc       0xb2 ./User/main.o
+ *fill*         0x000000000000297e        0x2 
  .rodata.onkou_tbl
-                0x000000000000356c       0x18 ./User/main.o
+                0x0000000000002980       0x18 ./User/main.o
  .rodata.onkou_mei_tbl
-                0x0000000000003584       0x40 ./User/main.o
+                0x0000000000002998       0x40 ./User/main.o
  .rodata.port_tbl
-                0x00000000000035c4       0x15 ./User/main.o
- *fill*         0x00000000000035d9        0x3 
+                0x00000000000029d8       0x15 ./User/main.o
+ *fill*         0x00000000000029ed        0x3 
  .rodata.onka_tbl
-                0x00000000000035dc       0x15 ./User/main.o
+                0x00000000000029f0       0x15 ./User/main.o
+ *fill*         0x0000000000002a05        0x3 
+ .rodata.voiceS_idx
+                0x0000000000002a08       0x48 ./User/main.o
+ .rodata.voiceN_idx
+                0x0000000000002a50       0x18 ./User/main.o
+ .rodata.voice_DAME
+                0x0000000000002a68      0x795 ./User/main.o
+ *fill*         0x00000000000031fd        0x3 
+ .rodata.voice_WAN
+                0x0000000000003200      0x7dd ./User/main.o
  *(.gnu.linkonce.t.*)
-                0x00000000000035f4                . = ALIGN (0x4)
- *fill*         0x00000000000035f1        0x3 
+                0x00000000000039e0                . = ALIGN (0x4)
+ *fill*         0x00000000000039dd        0x3 
 
-.rela.dyn       0x00000000000035f4        0x0
- .rela.init     0x00000000000035f4        0x0 ./User/main.o
+.rela.dyn       0x00000000000039e0        0x0
+ .rela.init     0x00000000000039e0        0x0 ./User/main.o
  .rela.text.handle_reset
-                0x00000000000035f4        0x0 ./User/main.o
+                0x00000000000039e0        0x0 ./User/main.o
 
-.fini           0x00000000000035f4        0x0
+.fini           0x00000000000039e0        0x0
  *(SORT_NONE(.fini))
-                0x00000000000035f4                . = ALIGN (0x4)
+                0x00000000000039e0                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (_eitcm = .)
 
-.preinit_array  0x00000000000035f4        0x0
+.preinit_array  0x00000000000039e0        0x0
                 [!provide]                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x00000000000035f4        0x0
+.init_array     0x00000000000039e0        0x0
                 [!provide]                        PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
                 [!provide]                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x00000000000035f4        0x0
+.fini_array     0x00000000000039e0        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
@@ -192,15 +220,15 @@ END GROUP
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
 
-.dalign         0x0000000020000000        0x0 load address 0x00000000000035f4
+.dalign         0x0000000020000000        0x0 load address 0x00000000000039e0
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data_vma = .)
 
-.dlalign        0x00000000000035f4        0x0
-                0x00000000000035f4                . = ALIGN (0x4)
-                0x00000000000035f4                PROVIDE (_data_lma = .)
+.dlalign        0x00000000000039e0        0x0
+                0x00000000000039e0                . = ALIGN (0x4)
+                0x00000000000039e0                PROVIDE (_data_lma = .)
 
-.data           0x0000000020000000        0x0 load address 0x00000000000035f4
+.data           0x0000000020000000        0x0 load address 0x00000000000039e0
                 0x0000000020000000                . = ALIGN (0x4)
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
@@ -219,30 +247,49 @@ END GROUP
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_edata = .)
 
-.bss            0x0000000020000000      0x190 load address 0x00000000000035f4
+.bss            0x0000000020000000      0x1c8 load address 0x00000000000039e0
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_sbss = .)
  *(.sbss*)
  *(.gnu.linkonce.sb.*)
  *(.bss*)
- .bss.sleep_tmr.0
-                0x0000000020000000        0x2 ./User/main.o
- .bss.kyoku     0x0000000020000002        0x1 ./User/main.o
+ .bss.init_tmr.0
+                0x0000000020000000        0x1 ./User/main.o
+ .bss.data.1    0x0000000020000001        0x1 ./User/main.o
+ .bss.data.2    0x0000000020000002        0x1 ./User/main.o
  *fill*         0x0000000020000003        0x1 
- .bss.sw_hst    0x0000000020000004        0x5 ./User/main.o
- *fill*         0x0000000020000009        0x3 
- .bss.part      0x000000002000000c      0x100 ./User/main.o
- .bss.song      0x000000002000010c       0x14 ./User/main.o
- .bss.kyotuu    0x0000000020000120        0x8 ./User/main.o
- .bss.buf_read  0x0000000020000128        0x1 ./User/main.o
+ .bss.sleep_tmr.3
+                0x0000000020000004        0x2 ./User/main.o
+ .bss.onseiS    0x0000000020000006        0x1 ./User/main.o
+ .bss.onseiN    0x0000000020000007        0x1 ./User/main.o
+ .bss.kyoku_rand_msk
+                0x0000000020000008        0x1 ./User/main.o
+ .bss.kyoku     0x0000000020000009        0x1 ./User/main.o
+ .bss.rand_x    0x000000002000000a        0x1 ./User/main.o
+ *fill*         0x000000002000000b        0x1 
+ .bss.cvd_hist  0x000000002000000c        0x4 ./User/main.o
+ .bss.cds_ave   0x0000000020000010        0x1 ./User/main.o
+ .bss.cds_hst   0x0000000020000011        0x1 ./User/main.o
+ .bss.cds_value
+                0x0000000020000012        0x1 ./User/main.o
+ *fill*         0x0000000020000013        0x1 
+ .bss.sw_hst    0x0000000020000014        0x4 ./User/main.o
+ .bss.voiceS    0x0000000020000018       0x14 ./User/main.o
+ .bss.voiceN    0x000000002000002c       0x14 ./User/main.o
+ .bss.part      0x0000000020000040      0x100 ./User/main.o
+ .bss.song      0x0000000020000140       0x14 ./User/main.o
+ .bss.kyotuu    0x0000000020000154        0x8 ./User/main.o
+ .bss.buf_read  0x000000002000015c        0x1 ./User/main.o
  .bss.buf_write
-                0x0000000020000129        0x1 ./User/main.o
- *fill*         0x000000002000012a        0x2 
- .bss.buf       0x000000002000012c       0x64 ./User/main.o
+                0x000000002000015d        0x1 ./User/main.o
+ *fill*         0x000000002000015e        0x2 
+ .bss.buf       0x0000000020000160       0x64 ./User/main.o
+ .bss.spi_addr  0x00000000200001c4        0x1 ./User/main.o
  *(.gnu.linkonce.b.*)
  *(COMMON*)
-                0x0000000020000190                . = ALIGN (0x4)
-                0x0000000020000190                PROVIDE (_ebss = .)
+                0x00000000200001c8                . = ALIGN (0x4)
+ *fill*         0x00000000200001c5        0x3 
+                0x00000000200001c8                PROVIDE (_ebss = .)
                 [!provide]                        PROVIDE (_end = _ebss)
                 [!provide]                        PROVIDE (end = .)
 
@@ -255,58 +302,58 @@ END GROUP
                 0x0000000020001000                PROVIDE (_eusrstack = .)
 OUTPUT(orgel_SW_V002A4M6.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x1727
- .debug_info    0x0000000000000000     0x16df ./User/main.o
- .debug_info    0x00000000000016df       0x25 ./User/song_idx.o
- .debug_info    0x0000000000001704       0x23 ./Startup/startup_ch32v00X.o
+.debug_info     0x0000000000000000     0x3f75
+ .debug_info    0x0000000000000000     0x3f2d ./User/main.o
+ .debug_info    0x0000000000003f2d       0x25 ./User/song_idx.o
+ .debug_info    0x0000000000003f52       0x23 ./Startup/startup_ch32v00X.o
 
-.debug_abbrev   0x0000000000000000      0x48e
- .debug_abbrev  0x0000000000000000      0x468 ./User/main.o
- .debug_abbrev  0x0000000000000468       0x14 ./User/song_idx.o
- .debug_abbrev  0x000000000000047c       0x12 ./Startup/startup_ch32v00X.o
+.debug_abbrev   0x0000000000000000      0x5d1
+ .debug_abbrev  0x0000000000000000      0x5ab ./User/main.o
+ .debug_abbrev  0x00000000000005ab       0x14 ./User/song_idx.o
+ .debug_abbrev  0x00000000000005bf       0x12 ./Startup/startup_ch32v00X.o
 
 .debug_loclists
-                0x0000000000000000      0x646
+                0x0000000000000000      0xb12
  .debug_loclists
-                0x0000000000000000      0x646 ./User/main.o
+                0x0000000000000000      0xb12 ./User/main.o
 
-.debug_aranges  0x0000000000000000       0x98
+.debug_aranges  0x0000000000000000       0xd8
  .debug_aranges
-                0x0000000000000000       0x48 ./User/main.o
+                0x0000000000000000       0x88 ./User/main.o
  .debug_aranges
-                0x0000000000000048       0x20 ./User/song_idx.o
+                0x0000000000000088       0x20 ./User/song_idx.o
  .debug_aranges
-                0x0000000000000068       0x30 ./Startup/startup_ch32v00X.o
+                0x00000000000000a8       0x30 ./Startup/startup_ch32v00X.o
 
 .debug_rnglists
-                0x0000000000000000      0x158
+                0x0000000000000000      0x1f4
  .debug_rnglists
-                0x0000000000000000      0x137 ./User/main.o
+                0x0000000000000000      0x1d3 ./User/main.o
  .debug_rnglists
-                0x0000000000000137       0x21 ./Startup/startup_ch32v00X.o
+                0x00000000000001d3       0x21 ./Startup/startup_ch32v00X.o
 
-.debug_line     0x0000000000000000     0x1f04
- .debug_line    0x0000000000000000     0x1dab ./User/main.o
- .debug_line    0x0000000000001dab       0x4b ./User/song_idx.o
- .debug_line    0x0000000000001df6      0x10e ./Startup/startup_ch32v00X.o
+.debug_line     0x0000000000000000     0x38e2
+ .debug_line    0x0000000000000000     0x3789 ./User/main.o
+ .debug_line    0x0000000000003789       0x4b ./User/song_idx.o
+ .debug_line    0x00000000000037d4      0x10e ./Startup/startup_ch32v00X.o
 
-.debug_str      0x0000000000000000      0x988
- .debug_str     0x0000000000000000      0x918 ./User/main.o
-                                        0x9e8 (size before relaxing)
- .debug_str     0x0000000000000918       0x52 ./User/song_idx.o
- .debug_str     0x000000000000096a       0x1e ./Startup/startup_ch32v00X.o
+.debug_str      0x0000000000000000      0xb7a
+ .debug_str     0x0000000000000000      0xb0a ./User/main.o
+                                        0xbe7 (size before relaxing)
+ .debug_str     0x0000000000000b0a       0x52 ./User/song_idx.o
+ .debug_str     0x0000000000000b5c       0x1e ./Startup/startup_ch32v00X.o
                                          0x5d (size before relaxing)
 
 .debug_line_str
-                0x0000000000000000      0x22c
+                0x0000000000000000      0x27f
  .debug_line_str
-                0x0000000000000000      0x203 ./User/main.o
-                                        0x244 (size before relaxing)
+                0x0000000000000000      0x256 ./User/main.o
+                                        0x297 (size before relaxing)
  .debug_line_str
-                0x0000000000000203        0xb ./User/song_idx.o
+                0x0000000000000256        0xb ./User/song_idx.o
                                          0x51 (size before relaxing)
  .debug_line_str
-                0x000000000000020e       0x1e ./Startup/startup_ch32v00X.o
+                0x0000000000000261       0x1e ./Startup/startup_ch32v00X.o
                                          0x64 (size before relaxing)
 
 .comment        0x0000000000000000       0x31
@@ -326,5 +373,5 @@ OUTPUT(orgel_SW_V002A4M6.elf elf32-littleriscv)
  .riscv.attributes
                 0x00000000000000ba       0x2e c:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc12/bin/../lib/gcc/riscv-none-elf/12.2.0/../../../../riscv-none-elf/lib/rv32ec_zmmul_xw/ilp32e\libg_nano.a(lib_a-memset.o)
 
-.debug_frame    0x0000000000000000       0x94
- .debug_frame   0x0000000000000000       0x94 ./User/main.o
+.debug_frame    0x0000000000000000      0x148
+ .debug_frame   0x0000000000000000      0x148 ./User/main.o

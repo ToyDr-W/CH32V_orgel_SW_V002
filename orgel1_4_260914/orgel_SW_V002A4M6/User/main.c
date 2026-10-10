@@ -6,23 +6,23 @@
 //#define	I2C_SOFT	//I2Cをｿﾌﾄ実装するときに宣言する
 //#define	SPI_SOFT	//SPIをｿﾌﾄ実装するときに宣言する
 //#define	SPI2		//2線SPIのときに宣言する
-//#define	SPI3		//3線SPIのときに宣言する
+#define	SPI3		//3線SPIのときに宣言する
 #define		SLEEP_EN	//Sleep機能を実装するときに宣言する
 //#define	KYOKU_AUTO	//ｵﾙｺﾞｰﾙ演奏を自動開始するときに宣言する
 //#define	ONSEIN_AUTO	//音声0再生を自動開始するときに宣言する
 //#define	ONSEII_AUTO	//音声I再生を自動開始するときに宣言する
 //#define	ONSEIC_AUTO	//音声C再生を自動開始するときに宣言する
 //#define	ONSEIS_AUTO	//音声S再生を自動開始するときに宣言する
-//#define	RAND_An	6	//ﾗﾝﾀﾞﾏｲｽﾞの種にするAn番号(PD6:A6)
-//#define	KYOKU_RAND	//曲番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
+#define	RAND_An	6	//ﾗﾝﾀﾞﾏｲｽﾞの種にするAn番号(PD6:A6)
+#define	KYOKU_RAND	//曲番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
 //#define	ONSEIN_RAND	//音声N番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
 //#define	ONSEII_RAND	//音声I番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
 //#define	ONSEIC_RAND	//音声C番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
 //#define	ONSEIS_RAND	//音声S番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
 #define		SW_EN		//SWを実装するときに宣言する
 //#define	SW_PLNG		//SWをｲﾍﾞﾝﾄではなく､ﾎﾟｰﾘﾝｸﾞするときに宣言する
-//#define	CdS_EN		//CdSを実装するときに宣言する
-//#define	CVD_EN		//CVDを実装するときに宣言する
+#define	CdS_EN		//CdSを実装するときに宣言する
+#define	CVD_EN		//CVDを実装するときに宣言する
 
 //ｵﾙｺﾞｰﾙ箱への応用では以下を宣言しておくこと
 //#define	CdS_FUTA	//蓋を開ける(明)とｵﾝ判定する
@@ -207,8 +207,7 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
 #define SW0_TIMER				//SW0はﾀｲﾏｰﾓｰﾄﾞ
 //#define	SW0_REAL			//SW0はﾘｱﾙﾓｰﾄﾞ
-#define	SW0_CNT		ORGEL_CNT|VOICEN_CNT|VOICEI_CNT|VOICEC_CNT|VOICES_CNT
-						//SW0の操作対象
+#define	SW0_CNT		ORGEL_CNT	//SW0の操作対象
 
 //SW1のﾎﾟｰﾄ定義
 #define	SW1_GPIO	GPIOC			//SW1のﾎﾟｰﾄ
@@ -216,9 +215,9 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 #define	SW1_BIT		6			//SW1のﾋﾞｯﾄ
 #define	SW1_INV					//SW1入力は負論理
 //					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
-#define SW1_TIMER				//SW1はﾀｲﾏｰﾓｰﾄﾞ
-//#define	SW1_REAL			//SW1はﾘｱﾙﾓｰﾄﾞ
-#define	SW1_CNT		ORGEL_CNT|VOICEN_CNT|VOICEI_CNT|VOICEC_CNT|VOICES_CNT								//SW1の操作対象
+//#define SW1_TIMER				//SW1はﾀｲﾏｰﾓｰﾄﾞ
+#define	SW1_REAL			//SW1はﾘｱﾙﾓｰﾄﾞ
+#define	SW1_CNT		ORGEL_CNT	//SW1の操作対象
 
 //SW2のﾎﾟｰﾄ定義
 #define	SW2_GPIO	GPIOD			//SW2のﾎﾟｰﾄ
@@ -228,8 +227,7 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 //					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
 #define SW2_TIMER				//SW2はﾀｲﾏｰﾓｰﾄﾞ
 //#define	SW2_REAL			//SW2はﾘｱﾙﾓｰﾄﾞ
-#define	SW2_CNT		ORGEL_CNT|VOICEN_CNT|VOICEI_CNT|VOICEC_CNT|VOICES_CNT
-						//SW2の操作対象
+#define	SW2_CNT		VOICES_CNT	//SW2の操作対象
 
 //SW3のﾎﾟｰﾄ定義
 #define	SW3_GPIO	GPIOA			//SW3のﾎﾟｰﾄ
@@ -237,15 +235,14 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 #define	SW3_BIT		2			//SW3のﾋﾞｯﾄ
 #define	SW3_INV					//SW3入力は負論理
 //					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
-#define SW3_TIMER				//SW3はﾀｲﾏｰﾓｰﾄﾞ
-//#define	SW3_REAL			//SW3はﾘｱﾙﾓｰﾄﾞ
-#define	SW3_CNT		ORGEL_CNT|VOICEN_CNT|VOICEI_CNT|VOICEC_CNT|VOICES_CNT
-						//SW3の操作対象
+//#define SW3_TIMER				//SW3はﾀｲﾏｰﾓｰﾄﾞ
+#define	SW3_REAL			//SW3はﾘｱﾙﾓｰﾄﾞ
+#define	SW3_CNT		VOICES_CNT	//SW3の操作対象
 
 //SW4のﾎﾟｰﾄ定義
 #define	SW4_GPIO	GPIOC			//SW4のﾎﾟｰﾄ
 #define	SW4_EXTI_PORT	2			//SW4のEXTIﾎﾟｰﾄ(0=PA､2=PC､3=PD)
-#define	SW4_BIT		0			//SW4のﾋﾞｯﾄ
+//#define	SW4_BIT		0			//SW4のﾋﾞｯﾄ
 #define	SW4_INV					//SW4入力は負論理
 //					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
 #define SW4_TIMER				//SW4はﾀｲﾏｰﾓｰﾄﾞ
@@ -272,17 +269,16 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
 #define CdS_TIMER				//CdSはﾀｲﾏｰﾓｰﾄﾞ
 //#define	CdS_REAL			//CdSはﾘｱﾙﾓｰﾄﾞ
-#define	CdS_CNT	VOICEI_CNT|VOICEC_CNT|VOICES_CNT//CdSの操作対象
+#define	CdS_CNT	VOICES_CNT//CdSの操作対象
 
 //CVD0のﾎﾟｰﾄ定義
 #define	CVD0_GPIO	GPIOD			//CVD0のﾎﾟｰﾄ
 #define	CVD0_BIT	6			//CVD0のﾋﾞｯﾄ
 #define	CVD0_An		6			//CVD0のAn
 					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
-#define CVD0_TIMER				//CVD0はﾀｲﾏｰﾓｰﾄﾞ
-//#define	CVD0_REAL			//CVD0はﾘｱﾙﾓｰﾄﾞ
-#define	CVD0_CNT	VOICEI_CNT|VOICEC_CNT|VOICES_CNT
-						//CVD0の操作対象
+//#define CVD0_TIMER				//CVD0はﾀｲﾏｰﾓｰﾄﾞ
+#define	CVD0_REAL			//CVD0はﾘｱﾙﾓｰﾄﾞ
+#define	CVD0_CNT	VOICEN_CNT	//CVD0の操作対象
 
 //CVD1のﾎﾟｰﾄ定義
 #define	CVD1_GPIO	GPIOA			//CVD1のﾎﾟｰﾄ
@@ -316,7 +312,7 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 
 //LED0のﾎﾟｰﾄ定義
 #define	LED0_GPIO	GPIOD			//LED0のﾎﾟｰﾄ
-#define	LED0_BIT	7			//LED0のﾋﾞｯﾄ
+//#define	LED0_BIT	7			//LED0のﾋﾞｯﾄ
 
 //LED1のﾎﾟｰﾄ定義
 #define	LED1_GPIO	GPIOA			//LED1のﾎﾟｰﾄ
@@ -364,7 +360,7 @@ static const struct VOICEN_HDR voiceN_idx[]=
 {
 	von_mac(voice_WAN,sizeof(voice_WAN),8000)
 	von_mac(voice_DAME,sizeof(voice_DAME),8000)
-	von_mac(voice_CHIKO,sizeof(voice_CHIKO),8000)
+//	von_mac(voice_CHIKO,sizeof(voice_CHIKO),8000)
 };
 #define VOICEN_SU	(sizeof(voiceN_idx)/sizeof(voiceN_idx[0]))
 #endif
