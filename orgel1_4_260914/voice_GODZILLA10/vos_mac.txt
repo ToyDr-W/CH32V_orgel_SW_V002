@@ -1,0 +1,2 @@
+	vos_mac(0x000000,0x0c1b60,8000)	//1:wav\GODZILLA_full.wav
+	vos_mac(0x0c1b60,0x006ada,8000)	//2:wav\kamata-grito-1-142981.wav
