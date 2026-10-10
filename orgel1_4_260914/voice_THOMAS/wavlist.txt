@@ -1,0 +1,6 @@
+wav\THEME_short.wav
+wav\THEME_full.wav
+wav\THEME2_short.wav
+wav\THEME2_full.wav
+wav\WHISTLE.wav
+wav\WHISTLE2.wav

@@ -1,0 +1,6 @@
+	vos_mac(0x000000,0x012fd1,8000)	//1:wav\THEME_short.wav
+	vos_mac(0x012fd1,0x0a1b9a,8000)	//2:wav\THEME_full.wav
+	vos_mac(0x0b4b6b,0x0096fc,8000)	//3:wav\THEME2_short.wav
+	vos_mac(0x0be267,0x01cf43,8000)	//4:wav\THEME2_full.wav
+	vos_mac(0x0db1aa,0x0013eb,8000)	//5:wav\WHISTLE.wav
+	vos_mac(0x0dc595,0x001771,8000)	//6:wav\WHISTLE2.wav
