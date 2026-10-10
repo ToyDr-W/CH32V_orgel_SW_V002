@@ -29,6 +29,26 @@ SPI接続のフラッシュメモリ（または内蔵）から、IMA-ADPCM形�
 
 ---
 
+## 🎵 開発にご協力いただける皆様へ、情報を共有いたします。
+
+### 🌟 ベースとなる開発者 大泉さんの最新プログラム
+移植元（サンプル元）となるプログラムは以下からご確認いただけます。
+*   [Google ドライブ（zipファイル）: 
+    https://drive.google.com/file/d/1BHKj8xfGfpvUNbqxVwxWBnooY0XvVsuR/view](https://drive.google.com/file/d/1BHKj8xfGfpvUNbqxVwxWBnooY0XvVsuR/view)
+*   [ＣＨ３２Ｖ電子オルゴールVer1_4（ｏｒｇｅｌエンジンからデバイス固有処理を排除）: 
+    https://tutujith.blog.fc2.com/blog-entry-1080.html](https://tutujith.blog.fc2.com/blog-entry-1080.html)
+
+### 🛠 対象となるターゲット（マイコン）
+*   マイコン型番: **PY32V002A4M6** (16ピンパッケージ)
+
+### 💻 開発環境について
+つつじが丘おもちゃ病院のご本家ブログにて、MounRiverStudio を使った開発環境の構築手順が丁寧に解説されています。
+ご本家ブログの左側メニューでカテゴリから[「ＣＨ３２Ｖ開発」](https://tutujith.blog.fc2.com/blog-category-26.html)を選んで、一番古い記事をご参照願います。
+*   [解説ブログ: https://tutujith.blog.fc2.com/blog-entry-671.html
+](https://tutujith.blog.fc2.com/blog-entry-671.html)
+
+---
+
 ## 🤝 地域貢献とリサイクルへの想い
 おもちゃのリサイクル活動にお役立てください。
 
