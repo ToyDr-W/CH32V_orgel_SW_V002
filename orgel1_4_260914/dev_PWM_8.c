@@ -31,7 +31,7 @@ void TIM1_UP_IRQHandler(void)
 		TIM1->CH2CVR=(long)pcm*PWM_STEP/32768;
 						//正相を設定する
 	}
-	else if(pcm<0)				/負値のとき
+	else if(pcm<0)				//負値のとき
 	{
 		TIM1->CH2CVR=0;			//正相を止める
 		TIM1->CH4CVR=(long)(-pcm)*PWM_STEP/32768;
