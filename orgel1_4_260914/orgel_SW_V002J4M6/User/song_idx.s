@@ -64,6 +64,9 @@ song_idx_bgn:
 //son_mac (song_AIAI) 
 //#define song_AIAI_DEF
  
+son_mac (song_AISATSU)
+#define song_AISATSU_DEF
+
 //son_mac (song_AKATONBO) 
 //#define song_AKATONBO_DEF
  
@@ -172,6 +175,9 @@ song_idx_bgn:
 //son_mac (song_DERRY) 
 //#define song_DERRY_DEF
  
+//son_mac (song_DOKOHARU)
+//#define song_DOKOHARU_DEF
+
 //son_mac (song_DONGURI) 
 //#define song_DONGURI_DEF
  
@@ -220,6 +226,9 @@ son_mac (song_FUYUNOSEIZA3)
 //son_mac (song_GONDOLA) 
 //#define song_GONDOLA_DEF
  
+//son_mac (song_HAJIMETECHU3)
+//#define song_HAJIMETECHU3_DEF
+
 //son_mac (song_HALELUYA) 
 //#define song_HALELUYA_DEF
  
@@ -229,6 +238,9 @@ son_mac (song_FUYUNOSEIZA3)
 //son_mac (song_HANA) 
 //#define song_HANA_DEF
  
+//son_mac (song_HARUKAZE3)
+//#define song_HARUKAZE3_DEF
+
 //son_mac (song_HARUKITA) 
 //#define song_HARUKITA_DEF
  
@@ -508,6 +520,9 @@ son_mac (song_MIRAIHE3)
 //son_mac (song_SOUSYUNFU) 
 //#define song_SOUSYUNFU_DEF
  
+//son_mac (song_SWANEE3)
+//#define song_SWANEE3_DEF
+
 //son_mac (song_SYABONDAMA) 
 //#define song_SYABONDAMA_DEF
  

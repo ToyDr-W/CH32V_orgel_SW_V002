@@ -50,7 +50,7 @@ all: orgel_SW_V002J4M6.elf secondary-outputs
 
 # Tool invocations
 orgel_SW_V002J4M6.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-elf-gcc -march=rv32ec_zmmul_xw -mabi=ilp32e -msmall-data-limit=0 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "C:\ooizumis\WCH\orgel1_4-NNN\orgel_SW_V002J4M6\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"orgel_SW_V002J4M6.map" --specs=nano.specs --specs=nosys.specs -o "orgel_SW_V002J4M6.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lprintf
+	@	@	riscv-none-elf-gcc -march=rv32ec_zmmul_xw -mabi=ilp32e -msmall-data-limit=0 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "C:\WCH_orgel\orgel1_4_260914\orgel_SW_V002J4M6\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"orgel_SW_V002J4M6.map" --specs=nano.specs --specs=nosys.specs -o "orgel_SW_V002J4M6.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lprintf
 	@	@
 orgel_SW_V002J4M6.hex: orgel_SW_V002J4M6.elf
 	@	riscv-none-elf-objcopy -O ihex "orgel_SW_V002J4M6.elf"  "orgel_SW_V002J4M6.hex"
