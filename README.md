@@ -46,6 +46,24 @@ SPI接続のフラッシュメモリ（または内蔵）から、IMA-ADPCM形�
 
 ---
 
+> [!NOTE]
+> ### 📥 最新データのダウンロードについて（v1.2.0正式リリースまで）
+> 現在はバグ修正等の調整期間中のため、正式な「Release」での公開は行っていません。2週間ほど様子を見て、安定後に **v1.2.0（安定版）** としてリリース予定です。
+> 
+> それまでの間、最新の回路図およびプログラム一式をダウンロードするには、
+> [ここをクリックしてください。 ⬇️](https://github.com/ToyDr-W/CH32V_orgel_SW_V002/archive/refs/heads/main.zip)
+> ダウンロード（52.0 MBのZIPファイル）が直ちに開始されます。
+>
+> ---
+>
+> ### 📥 Downloading the Latest Data (Prior to v1.2.0 Official Release)
+> This project is currently undergoing final adjustments. We plan to officially release **v1.2.0 (Stable version)** in about two weeks.
+> 
+> In the meantime, [please click here to download ⬇️](https://github.com/ToyDr-W/CH32V_orgel_SW_V002/archive/refs/heads/main.zip) the latest circuit diagrams and the complete set of programs. The download (a 52.0 MB ZIP file) will begin immediately.
+> 
+
+---
+
 ## 🤝 地域貢献とリサイクルへの想い
 おもちゃのリサイクル活動にお役立てください。
 
