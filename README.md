@@ -24,7 +24,7 @@ SPI接続のフラッシュメモリ（または内蔵）から、IMA-ADPCM形�
 皆様が残した1つのカルテが、全国の同志の「次の臨床」を支える大きな力になります。
 
 
-👉 **[おもちゃ修理・マイコン換装 報告フォームからカルテを投稿する](https://github.com/ToyDr-W/CH32_orgel_SW_V002/issues)**
+#### 👉 **[おもちゃ修理・マイコン換装 報告フォームからカルテを投稿する](https://github.com/ToyDr-W/CH32_orgel_SW_V002/issues)**
 （Issues画面を開いて、右上の「New issue」ボタンをクリックしてフォームを選択）
 <p align="center">
   <br>
