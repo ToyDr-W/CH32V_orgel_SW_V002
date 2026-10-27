@@ -29,23 +29,20 @@ SPI接続のフラッシュメモリ（または内蔵）から、IMA-ADPCM形�
 
 ---
 
-## 🎵 開発にご協力いただける皆様へ、情報を共有いたします。
+### 🛠️ 現役ドクターの皆様へ：修理報告・カルテ募集中！
+本プログラム（CH32_orgelシリーズ）を活用し、おもちゃのマイコン換装やオルゴール化による修理（蘇生）に成功しましたら、ぜひ知見をご共有ください！
+皆様が残した1つのカルテが、全国の同志の「次の臨床」を支える大きな力になります。
 
-### 🌟 ベースとなる開発者 大泉さんの最新プログラム
-移植元（サンプル元）となるプログラムは以下からご確認いただけます。
-*   [Google ドライブ（zipファイル）: 
-    https://drive.google.com/file/d/1BHKj8xfGfpvUNbqxVwxWBnooY0XvVsuR/view](https://drive.google.com/file/d/1BHKj8xfGfpvUNbqxVwxWBnooY0XvVsuR/view)
-*   [ＣＨ３２Ｖ電子オルゴールVer1_4（ｏｒｇｅｌエンジンからデバイス固有処理を排除）: 
-    https://tutujith.blog.fc2.com/blog-entry-1080.html](https://tutujith.blog.fc2.com/blog-entry-1080.html)
 
-### 🛠 対象となるターゲット（マイコン）
-*   マイコン型番: **PY32V002A4M6** (16ピンパッケージ)
-
-### 💻 開発環境について
-つつじが丘おもちゃ病院のご本家ブログにて、MounRiverStudio を使った開発環境の構築手順が丁寧に解説されています。
-ご本家ブログの左側メニューでカテゴリから[「ＣＨ３２Ｖ開発」](https://tutujith.blog.fc2.com/blog-category-26.html)を選んで、一番古い記事をご参照願います。
-*   [解説ブログ: https://tutujith.blog.fc2.com/blog-entry-671.html
-](https://tutujith.blog.fc2.com/blog-entry-671.html)
+👉 **[おもちゃ修理・マイコン換装 報告フォームからカルテを投稿する](https://github.com/ToyDr-W/CH32_orgel_SW_V002/issues)**
+<p align="center">
+  <br>
+  <a href="https://youtu.be/pcVJL7qO2WE">
+<img width="45%" alt="SW_J4M6_CdS231018 (3)" src="https://github.com/user-attachments/assets/e878d739-6cdb-4d0c-9479-32af6f0cf8c2" />
+  <br>
+       <br>▶️ YouTubeで動作確認動画を再生する
+  </a>
+</p>
 
 ---
 
