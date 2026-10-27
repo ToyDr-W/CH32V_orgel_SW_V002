@@ -13,8 +13,8 @@
 //#define	ONSEII_AUTO	//音声I再生を自動開始するときに宣言する
 //#define	ONSEIC_AUTO	//音声C再生を自動開始するときに宣言する
 //#define	ONSEIS_AUTO	//音声S再生を自動開始するときに宣言する
-#define	RAND_An	6	//ﾗﾝﾀﾞﾏｲｽﾞの種にするAn番号(PD6:A6)
-#define	KYOKU_RAND	//曲番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
+//#define	RAND_An	6	//ﾗﾝﾀﾞﾏｲｽﾞの種にするAn番号(PD6:A6)
+//#define	KYOKU_RAND	//曲番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
 //#define	ONSEIN_RAND	//音声N番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
 //#define	ONSEII_RAND	//音声I番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
 //#define	ONSEIC_RAND	//音声C番号をﾗﾝﾀﾞﾏｲｽﾞするときに宣言する
@@ -31,6 +31,11 @@
 #define		VOICEN_IMA	//音声NがIMA_ADPCMｴﾝｺｰﾄﾞのときに宣言する
 #define		VOICEI_IMA	//音声IがIMA_ADPCMｴﾝｺｰﾄﾞのときに宣言する
 #define		VOICES_IMA	//音声SがIMA_ADPCMｴﾝｺｰﾄﾞのときに宣言する
+
+//CVD評価の閾値等		コチラで評価の閾値等を微調整できる (ToyDr.わたなべ)
+#define	CVD_THR1	15		//　閾値1を宣言する(ﾃﾞﾌｫﾙﾄ値は [15])
+#define	CVD_THR2	30		//　閾値2を宣言する(ﾃﾞﾌｫﾙﾄ値は [30])
+#define	CVD_INC		2		//　増分値を宣言する(ﾃﾞﾌｫﾙﾄ値は [2])
 
 
 /*
@@ -205,9 +210,9 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 #define	SW0_BIT		7			//SW0のﾋﾞｯﾄ
 #define	SW0_INV					//SW0入力は負論理
 					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
-#define SW0_TIMER				//SW0はﾀｲﾏｰﾓｰﾄﾞ
-//#define	SW0_REAL			//SW0はﾘｱﾙﾓｰﾄﾞ
-#define	SW0_CNT		ORGEL_CNT	//SW0の操作対象
+//#define SW0_TIMER				//SW0はﾀｲﾏｰﾓｰﾄﾞ
+#define	SW0_REAL			//SW0はﾘｱﾙﾓｰﾄﾞ	(Dr.W)
+#define	SW0_CNT		ORGEL_CNT	//SW0の操作対象	(Dr.W)
 
 //SW1のﾎﾟｰﾄ定義
 #define	SW1_GPIO	GPIOC			//SW1のﾎﾟｰﾄ
@@ -215,9 +220,9 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 #define	SW1_BIT		6			//SW1のﾋﾞｯﾄ
 #define	SW1_INV					//SW1入力は負論理
 //					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
-//#define SW1_TIMER				//SW1はﾀｲﾏｰﾓｰﾄﾞ
-#define	SW1_REAL			//SW1はﾘｱﾙﾓｰﾄﾞ
-#define	SW1_CNT		ORGEL_CNT	//SW1の操作対象
+#define SW1_TIMER				//SW1はﾀｲﾏｰﾓｰﾄﾞ
+//#define	SW1_REAL			//SW1はﾘｱﾙﾓｰﾄﾞ
+#define	SW1_CNT		ORGEL_CNT	//SW1の操作対象	(Dr.W)
 
 //SW2のﾎﾟｰﾄ定義
 #define	SW2_GPIO	GPIOD			//SW2のﾎﾟｰﾄ
@@ -227,7 +232,7 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 //					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
 #define SW2_TIMER				//SW2はﾀｲﾏｰﾓｰﾄﾞ
 //#define	SW2_REAL			//SW2はﾘｱﾙﾓｰﾄﾞ
-#define	SW2_CNT		VOICES_CNT	//SW2の操作対象
+#define	SW2_CNT		VOICES_CNT	//SW2の操作対象	(Dr.W)
 
 //SW3のﾎﾟｰﾄ定義
 #define	SW3_GPIO	GPIOA			//SW3のﾎﾟｰﾄ
@@ -236,8 +241,8 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 #define	SW3_INV					//SW3入力は負論理
 //					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
 //#define SW3_TIMER				//SW3はﾀｲﾏｰﾓｰﾄﾞ
-#define	SW3_REAL			//SW3はﾘｱﾙﾓｰﾄﾞ
-#define	SW3_CNT		VOICES_CNT	//SW3の操作対象
+#define	SW3_REAL			//SW3はﾘｱﾙﾓｰﾄﾞ	(Dr.W)
+#define	SW3_CNT		VOICEN_CNT	//SW3の操作対象	(Dr.W)
 
 //SW4のﾎﾟｰﾄ定義
 #define	SW4_GPIO	GPIOC			//SW4のﾎﾟｰﾄ
@@ -269,7 +274,7 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
 #define CdS_TIMER				//CdSはﾀｲﾏｰﾓｰﾄﾞ
 //#define	CdS_REAL			//CdSはﾘｱﾙﾓｰﾄﾞ
-#define	CdS_CNT	VOICES_CNT//CdSの操作対象
+#define	CdS_CNT	VOICES_CNT//CdSの操作対象	(Dr.W)
 
 //CVD0のﾎﾟｰﾄ定義
 #define	CVD0_GPIO	GPIOD			//CVD0のﾎﾟｰﾄ
@@ -277,8 +282,8 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 #define	CVD0_An		6			//CVD0のAn
 					//以下のﾀｲﾏｰﾓｰﾄﾞとﾘｱﾙﾓｰﾄﾞは択一
 //#define CVD0_TIMER				//CVD0はﾀｲﾏｰﾓｰﾄﾞ
-#define	CVD0_REAL			//CVD0はﾘｱﾙﾓｰﾄﾞ
-#define	CVD0_CNT	VOICEN_CNT	//CVD0の操作対象
+#define	CVD0_REAL			//CVD0はﾘｱﾙﾓｰﾄﾞ	(Dr.W)
+#define	CVD0_CNT	VOICEN_CNT	//CVD0の操作対象	(Dr.W)
 
 //CVD1のﾎﾟｰﾄ定義
 #define	CVD1_GPIO	GPIOA			//CVD1のﾎﾟｰﾄ
@@ -312,7 +317,7 @@ CH32V002A4M6のﾎﾟｰﾄの割当て
 
 //LED0のﾎﾟｰﾄ定義
 #define	LED0_GPIO	GPIOD			//LED0のﾎﾟｰﾄ
-//#define	LED0_BIT	7			//LED0のﾋﾞｯﾄ
+//#define	LED0_BIT	7		//LED0のﾋﾞｯﾄ	実装しない (Dr.W)
 
 //LED1のﾎﾟｰﾄ定義
 #define	LED1_GPIO	GPIOA			//LED1のﾎﾟｰﾄ
@@ -360,7 +365,7 @@ static const struct VOICEN_HDR voiceN_idx[]=
 {
 	von_mac(voice_WAN,sizeof(voice_WAN),8000)
 	von_mac(voice_DAME,sizeof(voice_DAME),8000)
-//	von_mac(voice_CHIKO,sizeof(voice_CHIKO),8000)
+//	von_mac(voice_CHIKO,sizeof(voice_CHIKO),8000)	実装しない (Dr.W)
 };
 #define VOICEN_SU	(sizeof(voiceN_idx)/sizeof(voiceN_idx[0]))
 #endif
@@ -425,6 +430,38 @@ static const struct VOICES_HDR voiceS_idx[]=
 {
 
 #ifdef VOICES_IMA			//IMA-ADPCMのとき
+    //｢ﾐﾆｰ｣の音声ﾃﾞｰﾀ(voice_MINNIE\W25Q32_IMA.hex)を使う	(Dr.W)
+    vos_mac(0x000000,0x009ea4,8000) //1:TEXT\artistic.wav
+    vos_mac(0x009ea4,0x001ff8,8000) //2:TEXT\asadayo.wav
+    vos_mac(0x00be9c,0x0012a8,8000) //3:TEXT\burannko.wav
+    vos_mac(0x00d144,0x0015b8,8000) //4:TEXT\dorenisiyoukana.wav
+    vos_mac(0x00e6fc,0x004944,8000) //5:TEXT\gambariya.wav
+    vos_mac(0x013040,0x001d48,8000) //6:TEXT\hannba-gu.wav
+    vos_mac(0x014d88,0x006404,8000) //7:TEXT\hello.wav
+    vos_mac(0x01b18c,0x002768,8000) //8:TEXT\hottoke-ki.wav
+    vos_mac(0x01d8f4,0x001588,8000) //9:TEXT\iitenki.wav
+    vos_mac(0x01ee7c,0x0014e8,8000) //10:TEXT\isshoniasobo.wav
+    vos_mac(0x020364,0x001c70,8000) //11:TEXT\kyouhaorusubann.wav
+    vos_mac(0x021fd4,0x0031e4,8000) //12:TEXT\mosimosi.wav
+    vos_mac(0x0251b8,0x0037b8,8000) //13:TEXT\myname.wav
+    vos_mac(0x028970,0x0029a8,8000) //14:TEXT\ninnjinntopi-mann.wav
+    vos_mac(0x02b318,0x001ac8,8000) //15:TEXT\nomimonohisiina.wav
+    vos_mac(0x02cde0,0x001328,8000) //16:TEXT\odekakesiyou.wav
+    vos_mac(0x02e108,0x000d78,8000) //17:TEXT\oisiine.wav
+    vos_mac(0x02ee80,0x0013a8,8000) //18:TEXT\onakasuita.wav
+    vos_mac(0x030228,0x001178,8000) //19:TEXT\oryourisiyou.wav
+    vos_mac(0x0313a0,0x001650,8000) //20:TEXT\osannponikou.wav
+    vos_mac(0x0329f0,0x001408,8000) //21:TEXT\osoujisiyou.wav
+    vos_mac(0x033df8,0x0012e8,8000) //22:TEXT\oyasuminasai.wav
+    vos_mac(0x0350e0,0x002e14,8000) //23:TEXT\there.wav
+    vos_mac(0x037ef4,0x0025a8,8000) //24:TEXT\ticklish.wav
+    vos_mac(0x03a49c,0x058008,8000) //25:WAV\ABCnouta.wav
+    vos_mac(0x0924a4,0x08cf48,8000) //26:WAV\aisukuri-munouta.wav
+    vos_mac(0x11f3ec,0x04ca08,8000) //27:WAV\genkotuyamanotanukisanmn.wav
+    vos_mac(0x16bdf4,0x05bf08,8000) //28:WAV\inunoomawarisann.wav
+    vos_mac(0x1c7cfc,0x075708,8000) //29:WAV\tewotatakimashou.wav
+    vos_mac(0x23d404,0x04c224,8000) //30:WAV\YooHoo.wav
+
     //｢ﾄｰﾏｽ｣の音声ﾃﾞｰﾀ(voice_THOMAS\W25Q16_IMA.hex)を使う
 //    vos_mac(0x000000,0x012fd1,8000) //1:wav\THEME_short.wav
 //    vos_mac(0x012fd1,0x0a1b9a,8000) //2:wav\THEME_full.wav
@@ -433,49 +470,17 @@ static const struct VOICES_HDR voiceS_idx[]=
 //    vos_mac(0x0db1aa,0x0013eb,8000) //5:wav\WHISTLE.wav
 //    vos_mac(0x0dc595,0x001771,8000) //6:wav\WHISTLE2.wav
 
-    //｢ﾐﾆｰ｣の音声ﾃﾞｰﾀ(voice_MINNIE\W25Q32_IMA.hex)を使う
-//    vos_mac(0x000000,0x009ea4,8000) //1:TEXT\artistic.wav
-//    vos_mac(0x009ea4,0x001ff8,8000) //2:TEXT\asadayo.wav
-//    vos_mac(0x00be9c,0x0012a8,8000) //3:TEXT\burannko.wav
-//    vos_mac(0x00d144,0x0015b8,8000) //4:TEXT\dorenisiyoukana.wav
-//    vos_mac(0x00e6fc,0x004944,8000) //5:TEXT\gambariya.wav
-//    vos_mac(0x013040,0x001d48,8000) //6:TEXT\hannba-gu.wav
-//    vos_mac(0x014d88,0x006404,8000) //7:TEXT\hello.wav
-//    vos_mac(0x01b18c,0x002768,8000) //8:TEXT\hottoke-ki.wav
-//    vos_mac(0x01d8f4,0x001588,8000) //9:TEXT\iitenki.wav
-//    vos_mac(0x01ee7c,0x0014e8,8000) //10:TEXT\isshoniasobo.wav
-//    vos_mac(0x020364,0x001c70,8000) //11:TEXT\kyouhaorusubann.wav
-//    vos_mac(0x021fd4,0x0031e4,8000) //12:TEXT\mosimosi.wav
-//    vos_mac(0x0251b8,0x0037b8,8000) //13:TEXT\myname.wav
-//    vos_mac(0x028970,0x0029a8,8000) //14:TEXT\ninnjinntopi-mann.wav
-//    vos_mac(0x02b318,0x001ac8,8000) //15:TEXT\nomimonohisiina.wav
-//    vos_mac(0x02cde0,0x001328,8000) //16:TEXT\odekakesiyou.wav
-//    vos_mac(0x02e108,0x000d78,8000) //17:TEXT\oisiine.wav
-//    vos_mac(0x02ee80,0x0013a8,8000) //18:TEXT\onakasuita.wav
-//    vos_mac(0x030228,0x001178,8000) //19:TEXT\oryourisiyou.wav
-//    vos_mac(0x0313a0,0x001650,8000) //20:TEXT\osannponikou.wav
-//    vos_mac(0x0329f0,0x001408,8000) //21:TEXT\osoujisiyou.wav
-//    vos_mac(0x033df8,0x0012e8,8000) //22:TEXT\oyasuminasai.wav
-//    vos_mac(0x0350e0,0x002e14,8000) //23:TEXT\there.wav
-//    vos_mac(0x037ef4,0x0025a8,8000) //24:TEXT\ticklish.wav
-//    vos_mac(0x03a49c,0x058008,8000) //25:WAV\ABCnouta.wav
-//    vos_mac(0x0924a4,0x08cf48,8000) //26:WAV\aisukuri-munouta.wav
-//    vos_mac(0x11f3ec,0x04ca08,8000) //27:WAV\genkotuyamanotanukisanmn.wav
-//    vos_mac(0x16bdf4,0x05bf08,8000) //28:WAV\inunoomawarisann.wav
-//    vos_mac(0x1c7cfc,0x075708,8000) //29:WAV\tewotatakimashou.wav
-//    vos_mac(0x23d404,0x04c224,8000) //30:WAV\YooHoo.wav
-
     //｢ｺﾞｼﾞﾗ｣の音声ﾃﾞｰﾀ(voice_GODZILLA10\W25Q_IMA.hex)を使う
 //    vos_mac(0x000000,0x060db0,8000) //1:wav\GODZILLA_full.wav
 //    vos_mac(0x060db0,0x00356d,8000) //2:wav\kamata-grito-1-142981.wav
 
     //｢ｷﾃｨﾐﾗｰﾅ｣の音声ﾃﾞｰﾀ(voice_Mirrorna\W25Q_IMA.hex)を使う
-    vos_mac(0x000000,0x001200,8000)	//1:sharin.wav
-    vos_mac(0x001200,0x0022ba,8000)	//2:kirakiraomeme.wav
-    vos_mac(0x0034ba,0x000cab,8000)	//3:aidorumitai.wav
-    vos_mac(0x004165,0x00158c,8000)	//4:kyounooshare.wav
-    vos_mac(0x0056f1,0x000eb0,8000)	//5:egaogasuteki.wav
-    vos_mac(0x0065a1,0x0019d2,8000)	//6:kirarin.wav
+//    vos_mac(0x000000,0x001200,8000)	//1:sharin.wav
+//    vos_mac(0x001200,0x0022ba,8000)	//2:kirakiraomeme.wav
+//    vos_mac(0x0034ba,0x000cab,8000)	//3:aidorumitai.wav
+//    vos_mac(0x004165,0x00158c,8000)	//4:kyounooshare.wav
+//    vos_mac(0x0056f1,0x000eb0,8000)	//5:egaogasuteki.wav
+//    vos_mac(0x0065a1,0x0019d2,8000)	//6:kirarin.wav
 
 #else
 	//｢ｷﾃｨﾐﾗｰﾅ｣の音声ﾃﾞｰﾀ(voice_Mirrorna\W25Q.hex)を使う

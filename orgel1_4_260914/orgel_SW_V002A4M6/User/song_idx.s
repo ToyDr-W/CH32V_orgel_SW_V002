@@ -70,7 +70,7 @@ son_mac (song_AISATSU)
 //son_mac (song_AKATONBO) 
 //#define song_AKATONBO_DEF
  
-//son_mac (song_ALOHAOE3) 
+//son_mac (song_ALOHAOE3)
 //#define song_ALOHAOE3_DEF
  
 //son_mac (song_AMAZING) 

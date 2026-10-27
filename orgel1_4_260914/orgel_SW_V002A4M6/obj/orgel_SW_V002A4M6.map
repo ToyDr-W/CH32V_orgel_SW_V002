@@ -61,7 +61,7 @@ END GROUP
  *fill*         0x00000000000000a6        0x2 
                 0x00000000000000a8                _einit = .
 
-.text           0x00000000000000a8     0x3d84
+.text           0x00000000000000a8     0x3e0c
                 0x00000000000000a8                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000000000a8     0x18c0 ./User/song_idx.o
@@ -108,99 +108,98 @@ END GROUP
                 0x0000000000001e26      0x134 ./User/main.o
                 0x0000000000001e26                cvd_read
  .text.startup.main
-                0x0000000000001f5a      0xcfe ./User/main.o
+                0x0000000000001f5a      0xc66 ./User/main.o
                 0x0000000000001f5a                main
  .text.vector_handler
-                0x0000000000002c58        0x2 ./Startup/startup_ch32v00X.o
-                0x0000000000002c58                OPCM_IRQHandler
-                0x0000000000002c58                TIM1_CC_IRQHandler
-                0x0000000000002c58                HardFault_Handler
-                0x0000000000002c58                SysTick_Handler
-                0x0000000000002c58                PVD_IRQHandler
-                0x0000000000002c58                NMI_Handler
-                0x0000000000002c58                SPI1_IRQHandler
-                0x0000000000002c58                AWU_IRQHandler
-                0x0000000000002c58                EXTI7_0_IRQHandler
-                0x0000000000002c58                DMA1_Channel4_IRQHandler
-                0x0000000000002c58                ADC1_IRQHandler
-                0x0000000000002c58                DMA1_Channel7_IRQHandler
-                0x0000000000002c58                I2C1_EV_IRQHandler
-                0x0000000000002c58                DMA1_Channel6_IRQHandler
-                0x0000000000002c58                RCC_IRQHandler
-                0x0000000000002c58                TIM1_TRG_COM_IRQHandler
-                0x0000000000002c58                DMA1_Channel1_IRQHandler
-                0x0000000000002c58                DMA1_Channel5_IRQHandler
-                0x0000000000002c58                DMA1_Channel3_IRQHandler
-                0x0000000000002c58                WWDG_IRQHandler
-                0x0000000000002c58                TIM2_IRQHandler
-                0x0000000000002c58                SW_Handler
-                0x0000000000002c58                TIM1_BRK_IRQHandler
-                0x0000000000002c58                USART2_IRQHandler
-                0x0000000000002c58                DMA1_Channel2_IRQHandler
-                0x0000000000002c58                FLASH_IRQHandler
-                0x0000000000002c58                USART1_IRQHandler
-                0x0000000000002c58                I2C1_ER_IRQHandler
+                0x0000000000002bc0        0x2 ./Startup/startup_ch32v00X.o
+                0x0000000000002bc0                OPCM_IRQHandler
+                0x0000000000002bc0                TIM1_CC_IRQHandler
+                0x0000000000002bc0                HardFault_Handler
+                0x0000000000002bc0                SysTick_Handler
+                0x0000000000002bc0                PVD_IRQHandler
+                0x0000000000002bc0                NMI_Handler
+                0x0000000000002bc0                SPI1_IRQHandler
+                0x0000000000002bc0                AWU_IRQHandler
+                0x0000000000002bc0                EXTI7_0_IRQHandler
+                0x0000000000002bc0                DMA1_Channel4_IRQHandler
+                0x0000000000002bc0                ADC1_IRQHandler
+                0x0000000000002bc0                DMA1_Channel7_IRQHandler
+                0x0000000000002bc0                I2C1_EV_IRQHandler
+                0x0000000000002bc0                DMA1_Channel6_IRQHandler
+                0x0000000000002bc0                RCC_IRQHandler
+                0x0000000000002bc0                TIM1_TRG_COM_IRQHandler
+                0x0000000000002bc0                DMA1_Channel1_IRQHandler
+                0x0000000000002bc0                DMA1_Channel5_IRQHandler
+                0x0000000000002bc0                DMA1_Channel3_IRQHandler
+                0x0000000000002bc0                WWDG_IRQHandler
+                0x0000000000002bc0                TIM2_IRQHandler
+                0x0000000000002bc0                SW_Handler
+                0x0000000000002bc0                TIM1_BRK_IRQHandler
+                0x0000000000002bc0                USART2_IRQHandler
+                0x0000000000002bc0                DMA1_Channel2_IRQHandler
+                0x0000000000002bc0                FLASH_IRQHandler
+                0x0000000000002bc0                USART1_IRQHandler
+                0x0000000000002bc0                I2C1_ER_IRQHandler
  .text.handle_reset
-                0x0000000000002c5a       0x8a ./Startup/startup_ch32v00X.o
-                0x0000000000002c5a                handle_reset
+                0x0000000000002bc2       0x8a ./Startup/startup_ch32v00X.o
+                0x0000000000002bc2                handle_reset
  *(.rodata)
  *(.rodata*)
- *fill*         0x0000000000002ce4        0x0 
  .rodata.sw_cnt
-                0x0000000000002ce4        0x4 ./User/main.o
+                0x0000000000002c4c        0x4 ./User/main.o
  .rodata.sw_cnf
-                0x0000000000002ce8       0x20 ./User/main.o
+                0x0000000000002c50       0x20 ./User/main.o
  .rodata.INDEX_TABLE
-                0x0000000000002d08       0x10 ./User/main.o
+                0x0000000000002c70       0x10 ./User/main.o
  .rodata.STEP_TABLE
-                0x0000000000002d18       0xb2 ./User/main.o
- *fill*         0x0000000000002dca        0x2 
+                0x0000000000002c80       0xb2 ./User/main.o
+ *fill*         0x0000000000002d32        0x2 
  .rodata.onkou_tbl
-                0x0000000000002dcc       0x18 ./User/main.o
+                0x0000000000002d34       0x18 ./User/main.o
  .rodata.onkou_mei_tbl
-                0x0000000000002de4       0x40 ./User/main.o
+                0x0000000000002d4c       0x40 ./User/main.o
  .rodata.port_tbl
-                0x0000000000002e24       0x15 ./User/main.o
- *fill*         0x0000000000002e39        0x3 
+                0x0000000000002d8c       0x15 ./User/main.o
+ *fill*         0x0000000000002da1        0x3 
  .rodata.onka_tbl
-                0x0000000000002e3c       0x15 ./User/main.o
- *fill*         0x0000000000002e51        0x3 
+                0x0000000000002da4       0x15 ./User/main.o
+ *fill*         0x0000000000002db9        0x3 
  .rodata.voiceS_idx
-                0x0000000000002e54       0x48 ./User/main.o
+                0x0000000000002dbc      0x168 ./User/main.o
  .rodata.voiceN_idx
-                0x0000000000002e9c       0x18 ./User/main.o
+                0x0000000000002f24       0x18 ./User/main.o
  .rodata.voice_DAME
-                0x0000000000002eb4      0x795 ./User/main.o
- *fill*         0x0000000000003649        0x3 
+                0x0000000000002f3c      0x795 ./User/main.o
+ *fill*         0x00000000000036d1        0x3 
  .rodata.voice_WAN
-                0x000000000000364c      0x7dd ./User/main.o
+                0x00000000000036d4      0x7dd ./User/main.o
  *(.gnu.linkonce.t.*)
-                0x0000000000003e2c                . = ALIGN (0x4)
- *fill*         0x0000000000003e29        0x3 
+                0x0000000000003eb4                . = ALIGN (0x4)
+ *fill*         0x0000000000003eb1        0x3 
 
-.rela.dyn       0x0000000000003e2c        0x0
- .rela.init     0x0000000000003e2c        0x0 ./User/main.o
+.rela.dyn       0x0000000000003eb4        0x0
+ .rela.init     0x0000000000003eb4        0x0 ./User/main.o
  .rela.text.handle_reset
-                0x0000000000003e2c        0x0 ./User/main.o
+                0x0000000000003eb4        0x0 ./User/main.o
 
-.fini           0x0000000000003e2c        0x0
+.fini           0x0000000000003eb4        0x0
  *(SORT_NONE(.fini))
-                0x0000000000003e2c                . = ALIGN (0x4)
+                0x0000000000003eb4                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (_eitcm = .)
 
-.preinit_array  0x0000000000003e2c        0x0
+.preinit_array  0x0000000000003eb4        0x0
                 [!provide]                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000000003e2c        0x0
+.init_array     0x0000000000003eb4        0x0
                 [!provide]                        PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
                 [!provide]                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000000003e2c        0x0
+.fini_array     0x0000000000003eb4        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
@@ -220,15 +219,15 @@ END GROUP
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
 
-.dalign         0x0000000020000000        0x0 load address 0x0000000000003e2c
+.dalign         0x0000000020000000        0x0 load address 0x0000000000003eb4
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_data_vma = .)
 
-.dlalign        0x0000000000003e2c        0x0
-                0x0000000000003e2c                . = ALIGN (0x4)
-                0x0000000000003e2c                PROVIDE (_data_lma = .)
+.dlalign        0x0000000000003eb4        0x0
+                0x0000000000003eb4                . = ALIGN (0x4)
+                0x0000000000003eb4                PROVIDE (_data_lma = .)
 
-.data           0x0000000020000000        0x0 load address 0x0000000000003e2c
+.data           0x0000000020000000        0x0 load address 0x0000000000003eb4
                 0x0000000020000000                . = ALIGN (0x4)
  *(.gnu.linkonce.r.*)
  *(.data .data.*)
@@ -247,7 +246,7 @@ END GROUP
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_edata = .)
 
-.bss            0x0000000020000000      0x1c8 load address 0x0000000000003e2c
+.bss            0x0000000020000000      0x1c8 load address 0x0000000000003eb4
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                PROVIDE (_sbss = .)
  *(.sbss*)
@@ -262,11 +261,8 @@ END GROUP
                 0x0000000020000004        0x2 ./User/main.o
  .bss.onseiS    0x0000000020000006        0x1 ./User/main.o
  .bss.onseiN    0x0000000020000007        0x1 ./User/main.o
- .bss.kyoku_rand_msk
-                0x0000000020000008        0x1 ./User/main.o
- .bss.kyoku     0x0000000020000009        0x1 ./User/main.o
- .bss.rand_x    0x000000002000000a        0x1 ./User/main.o
- *fill*         0x000000002000000b        0x1 
+ .bss.kyoku     0x0000000020000008        0x1 ./User/main.o
+ *fill*         0x0000000020000009        0x3 
  .bss.cvd_hist  0x000000002000000c        0x4 ./User/main.o
  .bss.cds_ave   0x0000000020000010        0x1 ./User/main.o
  .bss.cds_hst   0x0000000020000011        0x1 ./User/main.o
@@ -302,20 +298,20 @@ END GROUP
                 0x0000000020001000                PROVIDE (_eusrstack = .)
 OUTPUT(orgel_SW_V002A4M6.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000     0x3f75
- .debug_info    0x0000000000000000     0x3f2d ./User/main.o
- .debug_info    0x0000000000003f2d       0x25 ./User/song_idx.o
- .debug_info    0x0000000000003f52       0x23 ./Startup/startup_ch32v00X.o
+.debug_info     0x0000000000000000     0x3ef3
+ .debug_info    0x0000000000000000     0x3eab ./User/main.o
+ .debug_info    0x0000000000003eab       0x25 ./User/song_idx.o
+ .debug_info    0x0000000000003ed0       0x23 ./Startup/startup_ch32v00X.o
 
-.debug_abbrev   0x0000000000000000      0x5d1
- .debug_abbrev  0x0000000000000000      0x5ab ./User/main.o
- .debug_abbrev  0x00000000000005ab       0x14 ./User/song_idx.o
- .debug_abbrev  0x00000000000005bf       0x12 ./Startup/startup_ch32v00X.o
+.debug_abbrev   0x0000000000000000      0x5ab
+ .debug_abbrev  0x0000000000000000      0x585 ./User/main.o
+ .debug_abbrev  0x0000000000000585       0x14 ./User/song_idx.o
+ .debug_abbrev  0x0000000000000599       0x12 ./Startup/startup_ch32v00X.o
 
 .debug_loclists
-                0x0000000000000000      0xb12
+                0x0000000000000000      0xafa
  .debug_loclists
-                0x0000000000000000      0xb12 ./User/main.o
+                0x0000000000000000      0xafa ./User/main.o
 
 .debug_aranges  0x0000000000000000       0xd8
  .debug_aranges
@@ -332,16 +328,16 @@ OUTPUT(orgel_SW_V002A4M6.elf elf32-littleriscv)
  .debug_rnglists
                 0x00000000000001d3       0x21 ./Startup/startup_ch32v00X.o
 
-.debug_line     0x0000000000000000     0x38e2
- .debug_line    0x0000000000000000     0x3789 ./User/main.o
- .debug_line    0x0000000000003789       0x4b ./User/song_idx.o
- .debug_line    0x00000000000037d4      0x10e ./Startup/startup_ch32v00X.o
+.debug_line     0x0000000000000000     0x371f
+ .debug_line    0x0000000000000000     0x35c6 ./User/main.o
+ .debug_line    0x00000000000035c6       0x4b ./User/song_idx.o
+ .debug_line    0x0000000000003611      0x10e ./Startup/startup_ch32v00X.o
 
-.debug_str      0x0000000000000000      0xb7a
- .debug_str     0x0000000000000000      0xb0a ./User/main.o
-                                        0xbe7 (size before relaxing)
- .debug_str     0x0000000000000b0a       0x52 ./User/song_idx.o
- .debug_str     0x0000000000000b5c       0x1e ./Startup/startup_ch32v00X.o
+.debug_str      0x0000000000000000      0xb5f
+ .debug_str     0x0000000000000000      0xaef ./User/main.o
+                                        0xbc3 (size before relaxing)
+ .debug_str     0x0000000000000aef       0x52 ./User/song_idx.o
+ .debug_str     0x0000000000000b41       0x1e ./Startup/startup_ch32v00X.o
                                          0x5d (size before relaxing)
 
 .debug_line_str
