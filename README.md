@@ -40,7 +40,7 @@ SPI接続のフラッシュメモリ（または内蔵）から、IMA-ADPCM形�
   <a href="https://youtu.be/pcVJL7qO2WE">
 <img width="45%" alt="SW_J4M6_CdS231018 (3)" src="https://github.com/user-attachments/assets/e878d739-6cdb-4d0c-9479-32af6f0cf8c2" />
   <br>
-       <br>▶️ YouTubeで動作確認動画を再生する
+       <em>▶️ YouTubeで動作確認動画を再生する
   </a>
 </p>
 
