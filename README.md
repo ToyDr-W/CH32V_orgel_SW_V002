@@ -13,15 +13,13 @@
 
 ### 📥 データのダウンロード方法
 最新の回路図およびプログラム一式をダウンロードするには、 リポジトリ右上にある緑色の **`[ <> Code ]`** ボタンをクリックし、メニューの一番下にある **`Download ZIP`** から一括ダウンロードできます。
->> それまでの間、最新の回路図およびプログラム一式をダウンロードするには、 リポジトリTOPページ右上にある緑色の [ <> Code ] ボタンをクリックし、メニューの一番下にある Download ZIP から一括ダウンロードできます。 
 > 若しくは、[ここをクリックしてください。 ⬇️](https://github.com/ToyDr-W/CH32V_orgel_SW_V002/archive/refs/heads/main.zip)
 > ダウンロード（52.0 MBのZIPファイル）が直ちに開始されます。
->
-> ---
->
-> ### 📥 Downloading the Latest Data (Prior to v1.2.0 Official Release)
-> The file made available for download by the developer (Nabari City Tsutsujigaoka Toy Hospital) is updated periodically. When a new update is released, it will not be immediately incorporated into this repository; instead, we will monitor it for a while, and once it has proven stable, we plan to release it as **v1.2.0 (stable version)**.
-> 
+
+---
+
+### 📥 Downloading the Latest Data
+To download the latest circuit diagrams and the complete set of programs, click the green **`[ <> Code ]`** button at the top right of the repository, then select **`Download ZIP`** from the bottom of the menu to download everything at once.
 > In the meantime, [please click here to download ⬇️](https://github.com/ToyDr-W/CH32V_orgel_SW_V002/archive/refs/heads/main.zip) the latest circuit diagrams and the complete set of programs. The download (a 52.0 MB ZIP file) will begin immediately.
 > 
 
