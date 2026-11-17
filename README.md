@@ -7,9 +7,24 @@
   <a href="https://youtu.be/pcVJL7qO2WE">
 <img width="45%" alt="SW_J4M6_CdS231018 (3)" src="https://github.com/user-attachments/assets/e878d739-6cdb-4d0c-9479-32af6f0cf8c2" />
   <br>
-       <em>▶️ YouTubeで動作確認動画を再生する</em>
+       <em>▶️ YouTubeで動作確認動画を再生する ↗</em>
   </a>
 </p>
+> [!NOTE]
+> ### 📥 最新データのダウンロードについて（v1.2.0正式リリースまで）
+> 開発元（名張市つつじが丘おもちゃ病院様）の公開ダウンロードファイルは随時更新されます。次のアップデートがあったときは、本リポジトリへの反映は しばらく様子を見て、安定後に **v1.2.0（安定版）** としてリリース予定です。
+> 
+>> それまでの間、最新の回路図およびプログラム一式をダウンロードするには、 リポジトリ右上にある緑色の [ <> Code ] ボタンをクリックし、メニューの一番下にある Download ZIP から一括ダウンロードできます。 
+> 若しくは、[ここをクリックしてください。 ⬇️](https://github.com/ToyDr-W/CH32V_orgel_SW_V002/archive/refs/heads/main.zip)
+> ダウンロード（52.0 MBのZIPファイル）が直ちに開始されます。
+>
+> ---
+>
+> ### 📥 Downloading the Latest Data (Prior to v1.2.0 Official Release)
+> The file made available for download by the developer (Nabari City Tsutsujigaoka Toy Hospital) is updated periodically. When a new update is released, it will not be immediately incorporated into this repository; instead, we will monitor it for a while, and once it has proven stable, we plan to release it as **v1.2.0 (stable version)**.
+> 
+> In the meantime, [please click here to download ⬇️](https://github.com/ToyDr-W/CH32V_orgel_SW_V002/archive/refs/heads/main.zip) the latest circuit diagrams and the complete set of programs. The download (a 52.0 MB ZIP file) will begin immediately.
+> 
 
 ---
 
@@ -43,23 +58,6 @@ SPI接続のフラッシュメモリ（または内蔵）から、IMA-ADPCM形�
 * **`orgel_SW_V002J4M6`**: 省スペースな8ピンパッケージ、スイッチ切り替えとBTL駆動を両立した小型おもちゃ向け。
 * **`orgel_SW_V002A4M6`**: 16ピンパッケージ、複数スイッチやセンサー制御、LEDなどを追加しやすく拡張性が高い。
 * **`orgel_SW_V002F4P6`**: 20ピンパッケージ、複数スイッチやセンサー制御、多数ポートでさらに拡張性が高い。
-
-
-> [!NOTE]
-> ### 📥 最新データのダウンロードについて（v1.2.0正式リリースまで）
-> 開発元（名張市つつじが丘おもちゃ病院様）の公開ダウンロードファイルは随時更新されます。次のアップデートがあったときは、本リポジトリへの反映は しばらく様子を見て、安定後に **v1.2.0（安定版）** としてリリース予定です。
-> 
->> それまでの間、最新の回路図およびプログラム一式をダウンロードするには、 リポジトリ右上にある緑色の [ <> Code ] ボタンをクリックし、メニューの一番下にある Download ZIP から一括ダウンロードできます。 
-> 若しくは、[ここをクリックしてください。 ⬇️](https://github.com/ToyDr-W/CH32V_orgel_SW_V002/archive/refs/heads/main.zip)
-> ダウンロード（52.0 MBのZIPファイル）が直ちに開始されます。
->
-> ---
->
-> ### 📥 Downloading the Latest Data (Prior to v1.2.0 Official Release)
-> The file made available for download by the developer (Nabari City Tsutsujigaoka Toy Hospital) is updated periodically. When a new update is released, it will not be immediately incorporated into this repository; instead, we will monitor it for a while, and once it has proven stable, we plan to release it as **v1.2.0 (stable version)**.
-> 
-> In the meantime, [please click here to download ⬇️](https://github.com/ToyDr-W/CH32V_orgel_SW_V002/archive/refs/heads/main.zip) the latest circuit diagrams and the complete set of programs. The download (a 52.0 MB ZIP file) will begin immediately.
-> 
 
 ---
 
