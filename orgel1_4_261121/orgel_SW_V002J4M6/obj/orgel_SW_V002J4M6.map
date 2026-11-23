@@ -307,10 +307,10 @@ OUTPUT(orgel_SW_V002J4M6.elf elf32-littleriscv)
  .debug_rnglists
                 0x00000000000001a4       0x21 ./Startup/startup_ch32v00X.o
 
-.debug_line     0x0000000000000000     0x2b1d
- .debug_line    0x0000000000000000     0x29c4 ./User/main.o
- .debug_line    0x00000000000029c4       0x4b ./User/song_idx.o
- .debug_line    0x0000000000002a0f      0x10e ./Startup/startup_ch32v00X.o
+.debug_line     0x0000000000000000     0x2b17
+ .debug_line    0x0000000000000000     0x29be ./User/main.o
+ .debug_line    0x00000000000029be       0x4b ./User/song_idx.o
+ .debug_line    0x0000000000002a09      0x10e ./Startup/startup_ch32v00X.o
 
 .debug_str      0x0000000000000000      0xa88
  .debug_str     0x0000000000000000      0xa18 ./User/main.o
